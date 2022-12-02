@@ -6,5 +6,5 @@ I am a noob to Go! This year I want to use the AoC as an excuse to play with lan
 
 [Day 1 Challenge](https://adventofcode.com/2022/day/1) | [Day 1 Source Code](./day1/day1.go) 
 
-[Day 2 Challenge](https://adventofcode.com/2022/day/2) | [Day 2 Source Code](./day1/day2.go) 
+[Day 2 Challenge](https://adventofcode.com/2022/day/2) | [Day 2 Source Code](./day2/day2.go) 
 
