@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+//	"fmt"
 	"bufio"
 	"log"
 	"strings"
@@ -89,14 +89,19 @@ func playGameAndReturnScore(scanner *bufio.Scanner, finalScore int) int {
         return playGameAndReturnScore(scanner, finalScore+getMyScore(strategies[0], decideMyMove(strategies[0], strategies[1])))
 }
 
-func main() {
+func main_old() {
 	file, err := os.Open("./input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
-	finalScore := playGameAndReturnScore(scanner, 0)
-	log.Println(fmt.Sprintf("%s%d%s", "Your final score is: ", finalScore, "."))
+	playGameAndReturnScore(scanner, 0)
+	//finalScore := playGameAndReturnScore(scanner, 0)
+	//log.Println(fmt.Sprintf("%s%d%s", "Your final score is: ", finalScore, "."))
 
+}
+
+func main() {
+	main_old()
 }
