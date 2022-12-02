@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+//	"fmt"
 	"bufio"
 	"log"
 	"strings"
@@ -18,7 +18,7 @@ import (
 // Scissors > Paper
 // Rock > Scissors
 
-func decideMyMove(opponent string, me string) string {
+func decideMyMoveImproved(opponent string, me string) string {
 	winningCharMap := map[string]string{"A": "Y", "B": "Z", "C": "X"} 
 	drawingCharMap := map[string]string{"A": "X", "B": "Y", "C": "Z"}
 	losingCharMap := map[string]string{"A": "Z", "B": "X", "C": "Y"}
@@ -27,7 +27,7 @@ func decideMyMove(opponent string, me string) string {
 	return decisionMap[me]
 }
 
-func getMyScore(opponent string, me string) int {
+func getMyScoreImproved(opponent string, me string) int {
 	scoreMap := map[string]int{"X": 1, "Y": 2, "Z": 3}
 	winningCharMap := map[string]string{"A": "Y", "B": "Z", "C": "X"} 
 	drawingCharMap := map[string]string{"A": "X", "B": "Y", "C": "Z"}
@@ -45,7 +45,7 @@ func getMyScore(opponent string, me string) int {
 	panic("Could not match character to known strategy getMyScore")
 }
 
-func playGameAndReturnScore(scanner *bufio.Scanner, finalScore int) int {
+func playGameAndReturnScoreImproved(scanner *bufio.Scanner, finalScore int) int {
 	scanner.Scan()
 	nextLine := strings.TrimSpace(scanner.Text())
 	if len(nextLine) == 0 {
@@ -53,19 +53,20 @@ func playGameAndReturnScore(scanner *bufio.Scanner, finalScore int) int {
 	}
 	strategies := strings.Split(nextLine, " ")
 	// PART1 return playGameAndReturnScore(scanner, finalScore+getMyScore(strategies[0], strategies[1]))
-        return playGameAndReturnScore(scanner, finalScore+getMyScore(strategies[0], decideMyMove(strategies[0], strategies[1])))
+        return playGameAndReturnScoreImproved(scanner, finalScore+getMyScoreImproved(strategies[0], decideMyMoveImproved(strategies[0], strategies[1])))
 }
 
-func main() {
+func main_improved() {
 	file, err := os.Open("./input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
+	
+	playGameAndReturnScoreImproved(scanner, 0)
 
-
-	finalScore := playGameAndReturnScore(scanner, 0)
-	log.Println(fmt.Sprintf("%s%d%s", "Your final score is: ", finalScore, "."))
+//	finalScore := playGameAndReturnScoreImproved(scanner, 0)
+//	log.Println(fmt.Sprintf("%s%d%s", "Your final score is: ", finalScore, "."))
 
 }
