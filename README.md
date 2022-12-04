@@ -4,6 +4,8 @@ I am a noob to Go! This year I want to use the AoC as an excuse to play with lan
 
 ![Go Unicorn](./resources/go_unicorn.jpg)
 
+To see more Go AoC solutions, check out ![this awesome collection of repos](https://github.com/Bogdanp/awesome-advent-of-code/blob/master/README.md#go)!
+
 [Day 1 Challenge](https://adventofcode.com/2022/day/1) | [Day 1 Source Code](./day1/day1.go) 
 
 [Day 2 Challenge](https://adventofcode.com/2022/day/2) | [Day 2 Source Code Using If & Else's](./day2/day2.go) |  [Day 2 Source Code Using Maps](./day2/day2_maps.go) 
