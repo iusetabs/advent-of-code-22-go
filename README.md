@@ -15,5 +15,6 @@ At first I thought I wrote a shitty solution with a bunch of if and else stateme
 ![Screenshot of benchmarking](./resources/day2_benchmarking.png)
 
 [Day 3 Challenge](https://adventofcode.com/2022/day/3) | [Day 3 Source Code](./day3/day3.go) 
+
 [Day 4 Challenge](https://adventofcode.com/2022/day/4) | [Day 4 Source Code](./day4/day4.go) 
 
