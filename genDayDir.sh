@@ -15,5 +15,5 @@ touch "$dayName"/example.txt
 touch "$dayName"/README.md
 
 echo -e "package main\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tfmt.Println(\"$dayName\")\n}" >> $dayName"/"$dayName".go"
-echo -e "package main\nimport (\n\t\"testing\"\n)\n\nfunc BenchmarkP1(b *testing.B){\n\tpart1()\n}\n\nfunc BenchmarkP2(b *testing.B){\n\tmain_old()\n}"
+echo -e "package main\nimport (\n\t\"testing\"\n)\n\nfunc BenchmarkP1(b *testing.B){\n\tpart1()\n}\n\nfunc BenchmarkP2(b *testing.B){\n\tmain_old()\n}  >> $dayName"/"$dayName"_test.go"
 

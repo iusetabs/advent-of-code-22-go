@@ -4,7 +4,7 @@ I am a noob to Go! This year I want to use the AoC as an excuse to play with lan
 
 ![Go Unicorn](./resources/go_unicorn.jpg)
 
-To see more Go AoC solutions, check out ![this awesome collection of repos](https://github.com/Bogdanp/awesome-advent-of-code/blob/master/README.md#go)!
+To see more Go AoC solutions, check out [this awesome collection of repos](https://github.com/Bogdanp/awesome-advent-of-code/blob/master/README.md#go)!
 
 [Day 1 Challenge](https://adventofcode.com/2022/day/1) | [Day 1 Source Code](./day1/day1.go) 
 
@@ -15,4 +15,5 @@ At first I thought I wrote a shitty solution with a bunch of if and else stateme
 ![Screenshot of benchmarking](./resources/day2_benchmarking.png)
 
 [Day 3 Challenge](https://adventofcode.com/2022/day/3) | [Day 3 Source Code](./day3/day3.go) 
+[Day 4 Challenge](https://adventofcode.com/2022/day/4) | [Day 4 Source Code](./day4/day4.go) 
 
