@@ -24,7 +24,7 @@ func main() {
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
 
-	p1 := 0
+	p1, p2 := 0, 0
 
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
@@ -34,10 +34,17 @@ func main() {
 		bLower, bUpper := getLowerAndUpper(elfB)
 		if aLower >= bLower && aUpper <= bUpper {
 			p1+=1
+			p2+=1
 		} else if bLower >= aLower && bUpper <= aUpper  {
 			p1+=1
+			p2+=1
+		} else if aLower >= bLower && aLower <= bUpper {
+			p2+=1
+		} else if aUpper >= bLower && aUpper <= bUpper {
+			p2+=1
 		}
+
 	}
 
-	log.Println(fmt.Sprintf("%s%d%s", "Result P1: ", p1, "."))
+	log.Println(fmt.Sprintf("%s%d%s%s%d%s", "Result P1: ", p1, ".", " Result P2: ", p2, "."))
 }
