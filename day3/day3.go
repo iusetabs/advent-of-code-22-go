@@ -8,16 +8,6 @@ import (
 	"log"
 )
 
-// Half of a line is one compartment of a rucksack. Equal in size.
-// A and a represent a different item. 
-// Match alphabet to characters.
-// Use ASCII values and match to priority value.
-// Decimal A = 65
-// Decimal Z = 90
-// Decimal a = 97
-// Decimal z = 122
-// Find common character between two comparments
-
 // Credit for this function goes to https://github.com/juliangruber/go-intersect/blob/master
 func getCommonCharacter[T comparable](a []T, b []T) []T {
 	set := make([]T, 0)
@@ -102,5 +92,6 @@ func part1() {
 
 
 func main() {
+	part1()
 	part2()
 }
