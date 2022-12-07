@@ -19,7 +19,7 @@ func main() {
 	sizes := make(map[string]int)
 	path := []string{}
 	p1 := 0
-	p2 := 0
+	p2 := 30000000
 
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
@@ -48,7 +48,7 @@ func main() {
 	for _, v := range sizes {
 		if v <= 100000 {
 			p1 += v
-		} else if v >= memoryNeeded && (p2 == 0 || v <= p2) {
+		} else if v >= memoryNeeded && v <= p2 {
 			p2 = v
 		}
 	}
