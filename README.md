@@ -24,3 +24,5 @@ At first I thought I wrote a shitty solution with a bunch of if and else stateme
 
 [Day 7 Challenge](https://adventofcode.com/2022/day/7) | [Day 7 Source Code](./day7/day7.go) 
 
+[Day 8 Challenge](https://adventofcode.com/2022/day/8) | [Day 8 Source Code](./day8/day8.go) 
+
